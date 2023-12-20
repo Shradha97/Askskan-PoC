@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/saishradhamohanty/Desktop/Repo/Prototypes/experiment/experiment_askSkan/monitoring%20tests/mlruns/0/383a0ca4fe2a4b42ae640bf84c457e6f/artifacts
+end_time: 1700852618894
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 383a0ca4fe2a4b42ae640bf84c457e6f
+run_name: orderly-sponge-136
+run_uuid: 383a0ca4fe2a4b42ae640bf84c457e6f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700852618883
+status: 4
+tags: []
+user_id: saishradhamohanty

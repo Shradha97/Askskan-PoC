@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/saishradhamohanty/Desktop/Repo/Prototypes/experiment/experiment_askSkan/monitoring%20tests/mlruns/0/67dcd0e08c3440439946af2d6d34d11a/artifacts
+end_time: 1700852459837
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 67dcd0e08c3440439946af2d6d34d11a
+run_name: redolent-eel-305
+run_uuid: 67dcd0e08c3440439946af2d6d34d11a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700852459546
+status: 4
+tags: []
+user_id: saishradhamohanty

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/saishradhamohanty/Desktop/Repo/Prototypes/experiment/experiment_askSkan/monitoring%20tests/mlruns/0/a3ecd34baf224a25a664d6db2b0292bd/artifacts
+end_time: 1700851916210
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a3ecd34baf224a25a664d6db2b0292bd
+run_name: traveling-grub-366
+run_uuid: a3ecd34baf224a25a664d6db2b0292bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700851916167
+status: 4
+tags: []
+user_id: saishradhamohanty
