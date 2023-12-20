@@ -1,0 +1,27 @@
+Event:A specific occurrence of an action performed by the user at a given time.
+Activity:Describes a distinct user event, includes both process and non-process events. Only process events can be named. eg. of process events - enter first name, enter address details etc.
+Abstraction Hierarchy:An application-specific organization of activities logically grouped together into a hierarchical tree structure.
+Activity Abstraction: Also referred to as task. It is a node in the Abstraction Hierarchy Tree, a chosen logical group of activities within the Abstraction Hierarchy.
+Activity Instance:A participant-specific occurance of consecutive sequence of events at a given time belonging to the same activity abstraction. 
+Activity Discovered Name:Used only when explicitly asked about the discovered name of the activity.
+Non actionable event:Keyboard or mouse events which does not create user events that can be named are called non-actionable event. eg. alphabets, numbers, mouse scroll, mouse click etc. Also referred as non-process event.
+Case Identifier:A case will have one more case identifiers which are configured by process owner. Each case identifier has a name and a corresponding value that uniquely identifies the case.
+Participant:Also called user or resource, referred by participant_name in the schema. A human that actively engages with the system by performing actions or contributing to the event's occurrence. 
+Persona:Referred by persona_name in the schema. It is different from participant.
+Virtual Assistant:A bot sitting on the user's system that captures the events that observes the participant actions and captures them.
+Turn Around Time (TAT): Also known as total time or just time spent, referred by tat_event in the schema. Turn around time (TAT) = processing time + wait time. 
+Active time: Used when asked about active time or keyboard or mouse usage time. Do NOT used active_time for getting most used application.
+Idle time: Used when there is no keyboard or mouse usage.
+Session_switch: Do not use this column for calculating leaves.
+Processing time: It is different from process applications and non process applications. Used only when asked about processing time explicitly referred as processing_time in the schema.
+Event time: Referred by event_time in the schema. Used when asked anything about the time related to the event.
+Event date: Referred by event_date in the schema. Used when asked anything about the date related to the event.
+Productive/Productivity: It refers to the active time of the user represented by active_time column in the schema.
+Business applications/operations: These are events that include only process applications. agent_type != 0 when Business applications/operation is used. agent_type = 0 when Business applications/operation is not used.
+Utilization: Utilization is the time spent working(active_time) on either process or non process applications, use active_time column from the schema.
+Case touch: count(unique case_id_value).
+Case effort: sum(tat_event)/count(unique case_id_value) 
+case_id_value: It is used when referring to total cases.
+case_id_name: It is used when need case names.
+activity_id: It is used when asking about activity.
+Case: every event is mapped to a case which is uniquely identifed by case_id_value

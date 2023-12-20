@@ -1,0 +1,42 @@
+Column Name,Type,Description,Examples
+event_id,text,Unique Identifier for a particular event.,0186dcc060cb68888b8a088ec9c9332e
+sequence_id,int,Sequence number of the event. The sequence is assigned by the virtual assistant. The virtual assistant increments the number for every event created by it on that device.,73016
+event_time,datetime,Timestamp indicating when the event was captured.,2023-04-03 14:55:13.186000
+persona_id,text,Unique Id of a particular Persona.Use only when persona id is asked or used in the question,615db203fc4e3325b04bbc0f
+persona_name,text,Name given to a persona. It is a categorical variable. Not same as participant.,CES
+participant_name,text,Name of the participant involved in the event. Not same as persona.,Jack
+app_name,text,Also known as the application name or application. Alias name of the application on the device.,notepad
+agent_type,int,"This represents the values of different types of process and non-process. (All applications with values not equal to zero are process applications):Non-process applications: 0 ,Desktop or native applications: 2 ,Browser-based applications: 3, 4, 5, 6, 7, or 8 ,Java-based applications: 9 ,Mainframe applications: 10 or 11 ,Web extension-based applications: 100 and larger",101
+clipboard,int,Total number of updates made to the clipboard since the previous event up to the current event.,3
+title,text,Title of the current window while capturing the event.,Enter User Details
+event_date,datetime,Date indicating when the event was captured.,4/1/23
+navigation_key_count,int,Total count of navigation keys pressed from previous event up to the current event.,0
+number_key_count,int,Total count of numeric keys pressed from previous event up to the current event.,0
+mouse_count,int,Total count of mouse clicks from previous event up to the current event.,0
+mouse_wheel,int,Total count of mouse wheel movements from previous event upto the current event.,0
+alpha_key_count,int,Total count of alphabets pressed from previous event to this event.,0
+active_time,float,It measures the duration when a user is actively interacting with the computer by using the keyboard or mouse between two actions on the computer. It is calculated by dividing the time between the previous and current actions into one-minute intervals. If there is any keyboard or mouse activity within these intervals that time is counted as part of the active time.",0
+idle_time,float,Time duration where there is no keyboard or mouse activity within a minute window,1838.22
+wait_time,float,Also be called as inactive_time.It is the Total duration of idle time above the threshold-window (default threshold window is 3 minutes).,1838.22
+processing_time,float,It is the (Total idle time below thresh hold-window + active_time (default thresh hold is 3 minutes)).,0.72
+tat_event,float,Also known as tat time and total time. Represents the duration or time difference between consecutive events. Turn Around Time (TaT) =  next event time - current event time. ,0.72
+session_switch,bool,Did user start a new session. A user session starts with user login or when there is a user event after a long inactive time. A user session ends when there is inactivity time or user logs out.,FALSE
+app_switch,bool,Did user switch to a different application than the one associated with the previous user event.,FALSE
+case_switch,bool,Did user switch to a different case than the one associated with the previous user event.,FALSE
+activity_id,text,Id assigned to the activity which describes a distinct event.,3d4f6638f0658f635e9eb2d99c618b0f0b39c2818d8b3182174521328712f8d1
+activity_abstraction_level_id,text,Id of the Activity group in the Abstraction Hierarchy.,11a900ef662fc6968fd195f1d2e1282816a725ff7ec59b9997b23e49c02ca4c3
+activity_abstraction_level_name,text,Name of the Activity group in the Abstraction Hierarchy.,Insurance Case
+parent_activity_id,text,List of Ids of all activities in the Abstraction Hierarchy which are ancestors of the current Activity .,"[f387e55bd5281cfba5920223f853b5e9454f64eedf2b89786c671f35eec593bc, 44b4e13c1bafa59b9f9c33eaf82b7abd8239365e4bff679a6bdca5f09fbdbe0d, f40f0f2b3f510731c09b1df99804e107d16dfb83f71075d73dec25c0f3c6f207, 84aad2babf44ea02ab847ffd6ef4edd39171c6b1cd1b45a3ccbd5e8701c77d2b, 942c4e3fcb81f722a01c4c2008e017432ec33b41be435f8e1c6b0b9962789cef]"
+activity_discovered_name,text,Name assigned to a activity by activity discovery algorithm.,Target Date
+activity_instance_id,text,Id of Activity Instance.  ,642b37b91996ef0fb7d80290
+activity_instance_abstraction_level_alias_name,text,This term refers to the alias_name configured for activity_abstraction_level_id. Also referred to as activity_abstraction_level_alias_name and current_abstraction_level_alias_name.,View Insurance Case
+activity_instance_original_end_time,datetime,Used only when talking about activity instance.It is the time of the ending event within the Activity Instance. The event can be a user event or non actionable event. Last Event may be the current user event or a subsequest user event or non actionable event.,2023-04-03 14:55:13.907000
+activity_instance_end_time,datetime,Activity_instance_original_end_time modified by user.,2023-04-03 14:55:13.907000
+activity_instance_event_count,int,Used only when talking about activity instance.Total number of events included within an activity instance.,4
+activity_instance_start_time,datetime,Used only when talking about activity instance.The timestamp of the starting event within the group of events belonging to an activity instance.,2023-04-03 14:55:13.907000
+case_id_name,text,Name of the field for the case_id_value .,"Notification Number"
+case_id_value,text,A unique case identifier.,"T ABS-138016"
+url,text,url of the active application in view or application being processed currently. ,yatra.com/
+is_pruned,bool,"Boolean variable to indicate whether user events without sufficient collected attributes have been pruned to simplify activity discovery. Marked as 1 when an event is pruned, and 0 if not pruned.",0
+source,text,"Virtual assistant mode: Unattended mode: UA ,Attended mode: AA ,Expert assistant mode: EA",AA
+event_control_type,int,Widget control id ,50005
