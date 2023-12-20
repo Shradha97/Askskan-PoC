@@ -1,0 +1,32 @@
+major tables:
+  - name: unum_askskan.events_delta_tb
+    description: "This table contains information related to events"
+    usage: "Use this table when asked about events for any persona"
+    columns:
+      - event_id
+      - event_time
+      - sequence_id
+      - persona_id
+      - participant_id
+      - application_id
+      - agent_type
+      - clipboard
+      - title
+      - event_date
+      - navigation_key_count
+      - number_key_count
+      - mouse_count
+      - mouse_wheel
+      - alpha_key_count
+    additional_minor_tables:
+      - describe_table_abstraction_instances
+      - describe_worktime_metrics
+    table_join_info:
+      - join_set_1:
+          - source_column: "persona_id"
+          - target_column: "persona_id"
+          - target_table: "describe_table_abstraction_instances"
+      - join_set_2:
+          - source_column: "participant_id"
+          - target_column: "participant_id"
+          - target_table: "describe_worktime_metrics"

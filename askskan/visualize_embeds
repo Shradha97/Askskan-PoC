@@ -1,0 +1,4 @@
+#!/bin/bash
+# source ../.venv/bin/activate
+export PYTHONPATH=`pwd`
+python3 jobs/visualize_embeds_job.py "$@"

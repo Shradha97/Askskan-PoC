@@ -1,0 +1,1 @@
+- Since there is no date/ event_date column in this schema , ignore date condition in WHERE clause

@@ -1,0 +1,91 @@
+2023-11-15 19:53:59 [I] [U: 0] [S: 2014590801848113728] Starting service... (0.1.14 `October 31, 2023`
+)
+2023-11-15 19:53:59 [I] [U: 0] [S: 2014590801848113728] QUERY START DATE: 2023-04-01
+2023-11-15 19:53:59 [I] [U: 0] [S: 2014590801848113728] QUERY END DATE: 2023-04-30
+2023-11-15 19:53:59 [I] [U: 0] [S: 2014590801848113728] PERSONA ID: None
+2023-11-15 19:54:05 [D] [U: 0] [S: 2014590801848113728] Entering table selection chain...
+2023-11-15 19:54:08 [D] [U: 0] [S: 2014590801848113728] Finished table selection chain, obtained selected tables as a dictionary
+2023-11-15 19:54:08 [I] [U: 0] [S: 2014590801848113728] TABLES: {'unum_askskan.events_delta_tb': {'describe_table_abstraction_instances': 'persona_id', 'describe_worktime_metrics': 'participant_id'}}
+2023-11-15 19:54:08 [D] [U: 0] [S: 2014590801848113728] Entering QA retrieval chain...
+2023-11-15 19:54:11 [D] [U: 0] [S: 2014590801848113728] Finished model reponse retrieval
+2023-11-15 19:54:11 [D] [U: 0] [S: 2014590801848113728] Extracting SQL query from JSON reponse...
+2023-11-15 19:54:11 [D] [U: 0] [S: 2014590801848113728] Not a SQL query, returning statement as is
+2023-11-15 19:54:11 [I] [U: 0] [S: 2014590801848113728] SKANBOT : <{"Query": "SELECT COUNT(DISTINCT persona_id) AS total_personas FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' AND event_date <= '2023-04-30' LIMIT 10", "Column": "total_personas", "Skan Bot": "The total number of personas is ##total_personas##."}>
+2023-11-15 19:56:17 [I] [U: 0] [S: 898625899679801349] Starting service... (0.1.14 `October 31, 2023`
+)
+2023-11-15 19:56:17 [I] [U: 0] [S: 898625899679801349] QUERY START DATE: 2023-04-01
+2023-11-15 19:56:17 [I] [U: 0] [S: 898625899679801349] QUERY END DATE: 2023-04-30
+2023-11-15 19:56:17 [I] [U: 0] [S: 898625899679801349] PERSONA ID: None
+2023-11-15 19:56:24 [D] [U: 0] [S: 898625899679801349] Entering table selection chain...
+2023-11-15 19:56:27 [D] [U: 0] [S: 898625899679801349] Finished table selection chain, obtained selected tables as a dictionary
+2023-11-15 19:56:27 [I] [U: 0] [S: 898625899679801349] TABLES: {'unum_askskan.events_delta_tb': {'describe_table_abstraction_instances': 'persona_id', 'describe_worktime_metrics': 'participant_id'}}
+2023-11-15 19:56:27 [D] [U: 0] [S: 898625899679801349] Entering QA retrieval chain...
+2023-11-15 19:56:32 [D] [U: 0] [S: 898625899679801349] Finished model reponse retrieval
+2023-11-15 19:56:32 [D] [U: 0] [S: 898625899679801349] Extracting SQL query from JSON reponse...
+2023-11-15 19:56:32 [D] [U: 0] [S: 898625899679801349] Finished extracting SQL query
+2023-11-15 19:56:32 [I] [U: 0] [S: 898625899679801349] JSON_QRY: SELECT COUNT(DISTINCT persona_id) AS total_personas FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' AND event_date <= '2023-04-30' LIMIT 10
+2023-11-15 19:56:32 [I] [U: 0] [S: 898625899679801349] JSON_COL: total_personas
+2023-11-15 19:56:32 [I] [U: 0] [S: 898625899679801349] JSON_BOT: The total number of personas is ##total_personas##.
+2023-11-15 19:56:32 [D] [U: 0] [S: 898625899679801349] Executing SQL query...
+2023-11-15 19:56:33 [D] [U: 0] [S: 898625899679801349] Executing query on the datalake server...
+2023-11-15 19:56:33 [D] [U: 0] [S: 898625899679801349] Query executed successfully and results fetched!
+2023-11-15 19:56:33 [D] [U: 0] [S: 898625899679801349] QUERY_RESULT: Row(total_personas=6)
+2023-11-15 19:56:33 [D] [U: 0] [S: 898625899679801349] Formatting final response...
+2023-11-15 19:56:33 [E] [U: 0] [S: 898625899679801349] Exception occurred during processing: t
+Traceback (most recent call last):
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/.venv/lib/python3.9/site-packages/databricks/sql/types.py", line 152, in __getitem__
+    idx = self.__fields__.index(item)
+ValueError: tuple.index(x): x not in tuple
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/askskan/app/manager/askskan_qa_manager.py", line 215, in get_answer
+    ) = self.postprocessing_engine.get_final_bot_response_from_sql(
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/askskan/app/engine/postprocessing_engine.py", line 159, in get_final_bot_response_from_sql
+    else tuple(query_result[key] for key in column)
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/askskan/app/engine/postprocessing_engine.py", line 159, in <genexpr>
+    else tuple(query_result[key] for key in column)
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/.venv/lib/python3.9/site-packages/databricks/sql/types.py", line 157, in __getitem__
+    raise ValueError(item)
+ValueError: t
+2023-11-15 19:56:33 [I] [U: 0] [S: 898625899679801349] SKANBOT : Sorry, I'm not intelligent enough to answer your question now. Please try again or with a different question!
+2023-11-15 19:56:50 [I] [U: 0] [S: 3696748893906524781] Starting service... (0.1.14 `October 31, 2023`
+)
+2023-11-15 19:56:50 [I] [U: 0] [S: 3696748893906524781] QUERY START DATE: 2023-04-01
+2023-11-15 19:56:50 [I] [U: 0] [S: 3696748893906524781] QUERY END DATE: 2023-04-30
+2023-11-15 19:56:50 [I] [U: 0] [S: 3696748893906524781] PERSONA ID: None
+2023-11-15 19:56:53 [D] [U: 0] [S: 3696748893906524781] Entering table selection chain...
+2023-11-15 19:56:55 [D] [U: 0] [S: 3696748893906524781] Finished table selection chain, obtained selected tables as a dictionary
+2023-11-15 19:56:55 [I] [U: 0] [S: 3696748893906524781] TABLES: {'unum_askskan.events_delta_tb': {}}
+2023-11-15 19:56:55 [D] [U: 0] [S: 3696748893906524781] Entering QA retrieval chain...
+2023-11-15 19:56:59 [D] [U: 0] [S: 3696748893906524781] Finished model reponse retrieval
+2023-11-15 19:56:59 [D] [U: 0] [S: 3696748893906524781] Extracting SQL query from JSON reponse...
+2023-11-15 19:56:59 [D] [U: 0] [S: 3696748893906524781] Finished extracting SQL query
+2023-11-15 19:56:59 [I] [U: 0] [S: 3696748893906524781] JSON_QRY: SELECT COUNT(event_id) AS total_events FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' AND event_date <= '2023-04-30' LIMIT 10
+2023-11-15 19:56:59 [I] [U: 0] [S: 3696748893906524781] JSON_COL: total_events
+2023-11-15 19:56:59 [I] [U: 0] [S: 3696748893906524781] JSON_BOT: The total number of events is ##total_events##.
+2023-11-15 19:56:59 [D] [U: 0] [S: 3696748893906524781] Executing SQL query...
+2023-11-15 19:56:59 [D] [U: 0] [S: 3696748893906524781] Executing query on the datalake server...
+2023-11-15 19:57:00 [D] [U: 0] [S: 3696748893906524781] Query executed successfully and results fetched!
+2023-11-15 19:57:00 [D] [U: 0] [S: 3696748893906524781] QUERY_RESULT: Row(total_events=8680160)
+2023-11-15 19:57:00 [D] [U: 0] [S: 3696748893906524781] Formatting final response...
+2023-11-15 19:57:00 [E] [U: 0] [S: 3696748893906524781] Exception occurred during processing: t
+Traceback (most recent call last):
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/.venv/lib/python3.9/site-packages/databricks/sql/types.py", line 152, in __getitem__
+    idx = self.__fields__.index(item)
+ValueError: tuple.index(x): x not in tuple
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/askskan/app/manager/askskan_qa_manager.py", line 215, in get_answer
+    ) = self.postprocessing_engine.get_final_bot_response_from_sql(
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/askskan/app/engine/postprocessing_engine.py", line 159, in get_final_bot_response_from_sql
+    else tuple(query_result[key] for key in column)
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/askskan/app/engine/postprocessing_engine.py", line 159, in <genexpr>
+    else tuple(query_result[key] for key in column)
+  File "/Users/saishradhamohanty/Desktop/Repo/Prototypes/.venv/lib/python3.9/site-packages/databricks/sql/types.py", line 157, in __getitem__
+    raise ValueError(item)
+ValueError: t
+2023-11-15 19:57:00 [I] [U: 0] [S: 3696748893906524781] SKANBOT : Sorry, I'm not intelligent enough to answer your question now. Please try again or with a different question!

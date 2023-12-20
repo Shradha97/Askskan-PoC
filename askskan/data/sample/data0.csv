@@ -1,0 +1,157 @@
+case_id,case_status,case_type,task_name,participant_id,process_name,process_variant,applications_used,processing_time,wait_time,turnaround_time,start_time,no_of_keystokes,no_of_shortcut_keys
+C1001,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",300,50,350,2023-05-16T09:00:00Z,100,10
+C1001,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",600,100,700,2023-05-16T09:10:00Z,200,15
+C1001,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",600,1200,1800,2023-05-16T09:20:00Z,250,20
+C1001,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],180,60,240,2023-05-16T10:00:00Z,80,5
+C1002,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",420,70,490,2023-05-16T09:00:00Z,130,12
+C1002,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",700,150,850,2023-05-16T09:15:00Z,220,18
+C1002,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",700,1500,2200,2023-05-16T09:30:00Z,280,25
+C1002,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],200,70,270,2023-05-16T10:10:00Z,85,6
+C1003,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",320,55,375,2023-05-16T09:00:00Z,105,11
+C1003,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",620,110,730,2023-05-16T09:15:00Z,210,16
+C1003,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",620,1300,1920,2023-05-16T09:30:00Z,260,22
+C1003,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],190,65,255,2023-05-16T10:00:00Z,82,7
+C1004,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",430,75,505,2023-05-16T09:00:00Z,135,13
+C1004,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",720,160,880,2023-05-16T09:20:00Z,230,19
+C1004,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",720,1600,2320,2023-05-16T09:40:00Z,290,26
+C1004,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],210,75,285,2023-05-16T10:15:00Z,88,8
+C1005,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",310,52,362,2023-05-16T09:00:00Z,102,11
+C1005,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",610,105,715,2023-05-16T09:12:00Z,205,17
+C1005,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",610,1250,1860,2023-05-16T09:24:00Z,255,21
+C1005,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],185,62,247,2023-05-16T10:00:00Z,80,7
+C1006,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",440,78,518,2023-05-16T09:00:00Z,140,14
+C1006,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",730,170,900,2023-05-16T09:10:00Z,240,20
+C1006,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",730,1700,2430,2023-05-16T09:25:00Z,300,27
+C1006,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],220,80,300,2023-05-16T10:15:00Z,90,9
+C1007,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",330,57,387,2023-05-16T09:00:00Z,110,12
+C1007,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",640,115,755,2023-05-16T09:10:00Z,220,18
+C1007,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",640,1400,2040,2023-05-16T09:25:00Z,270,23
+C1007,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],200,70,270,2023-05-16T10:10:00Z,85,8
+C1008,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",450,80,530,2023-05-16T09:00:00Z,145,15
+C1008,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",740,180,920,2023-05-16T09:15:00Z,250,21
+C1008,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",740,1800,2540,2023-05-16T09:35:00Z,310,28
+C1008,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],230,85,315,2023-05-16T10:20:00Z,95,10
+C1009,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",340,60,400,2023-05-16T09:00:00Z,115,13
+C1009,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",650,120,770,2023-05-16T09:15:00Z,230,19
+C1009,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",650,1500,2150,2023-05-16T09:30:00Z,280,24
+C1009,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],210,75,285,2023-05-16T10:15:00Z,88,8
+C1010,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",460,82,542,2023-05-16T09:00:00Z,150,15
+C1010,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",750,190,940,2023-05-16T09:20:00Z,260,22
+C1010,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",750,1900,2650,2023-05-16T09:45:00Z,320,29
+C1010,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],240,90,330,2023-05-16T10:25:00Z,100,10
+C1011,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",350,62,412,2023-05-16T09:00:00Z,120,14
+C1011,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",660,130,790,2023-05-16T09:20:00Z,240,20
+C1011,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",660,1600,2260,2023-05-16T09:40:00Z,290,25
+C1011,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],220,80,300,2023-05-16T10:20:00Z,90,9
+C1012,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",470,84,554,2023-05-16T09:00:00Z,155,16
+C1012,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",760,200,960,2023-05-16T09:25:00Z,270,23
+C1012,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",760,2000,2760,2023-05-16T09:55:00Z,330,30
+C1012,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],250,95,345,2023-05-16T10:30:00Z,105,11
+C1013,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",360,64,424,2023-05-16T09:00:00Z,125,15
+C1013,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",670,140,810,2023-05-16T09:25:00Z,250,21
+C1013,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",670,1700,2370,2023-05-16T09:50:00Z,300,26
+C1013,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],230,85,315,2023-05-16T10:25:00Z,95,10
+C1014,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",480,86,566,2023-05-16T09:00:00Z,160,17
+C1014,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",770,210,980,2023-05-16T09:30:00Z,280,24
+C1014,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",770,2100,2870,2023-05-16T10:00:00Z,340,31
+C1014,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],260,100,360,2023-05-16T10:35:00Z,110,12
+C1015,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",370,66,436,2023-05-16T09:00:00Z,130,16
+C1015,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",680,150,830,2023-05-16T09:30:00Z,260,22
+C1015,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",680,1800,2480,2023-05-16T10:00:00Z,310,27
+C1015,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],240,90,330,2023-05-16T10:30:00Z,100,11
+C1016,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",490,88,578,2023-05-16T09:00:00Z,165,18
+C1016,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",780,220,1000,2023-05-16T09:35:00Z,290,25
+C1016,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",780,2200,2980,2023-05-16T10:05:00Z,350,32
+C1016,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],270,105,375,2023-05-16T10:40:00Z,115,13
+C1017,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",380,68,448,2023-05-16T09:00:00Z,135,17
+C1017,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",690,160,850,2023-05-16T09:35:00Z,270,23
+C1017,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",690,1900,2590,2023-05-16T10:10:00Z,320,28
+C1017,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],250,95,345,2023-05-16T10:45:00Z,105,12
+C1018,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",500,90,590,2023-05-16T09:00:00Z,170,19
+C1018,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",790,230,1020,2023-05-16T09:40:00Z,300,26
+C1018,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",790,2300,3090,2023-05-16T10:15:00Z,360,33
+C1018,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],280,110,390,2023-05-16T10:50:00Z,120,14
+C1019,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",390,70,460,2023-05-16T09:00:00Z,140,18
+C1019,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",700,170,870,2023-05-16T09:40:00Z,280,24
+C1019,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",700,2000,2700,2023-05-16T10:15:00Z,330,29
+C1019,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],260,100,360,2023-05-16T10:50:00Z,110,12
+101,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-01T18:00:00Z,80,10
+102,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-01T19:00:00Z,75,8
+103,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-01T20:00:00Z,90,11
+104,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-02T08:00:00Z,80,10
+105,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-02T09:00:00Z,75,8
+106,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-02T10:00:00Z,90,11
+107,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-02T11:00:00Z,80,10
+108,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-02T12:00:00Z,75,8
+109,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-02T13:00:00Z,90,11
+110,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-02T14:00:00Z,80,10
+111,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-02T15:00:00Z,75,8
+112,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-02T16:00:00Z,90,11
+113,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-02T17:00:00Z,80,10
+114,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-02T18:00:00Z,75,8
+115,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-02T19:00:00Z,90,11
+116,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-03T08:00:00Z,80,10
+117,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-03T09:00:00Z,75,8
+118,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-03T10:00:00Z,90,11
+119,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-03T11:00:00Z,80,10
+120,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-03T12:00:00Z,75,8
+121,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-03T13:00:00Z,90,11
+122,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-03T14:00:00Z,80,10
+123,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-03T15:00:00Z,75,8
+124,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-03T16:00:00Z,90,11
+125,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-03T17:00:00Z,80,10
+126,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-03T18:00:00Z,75,8
+127,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-03T19:00:00Z,90,11
+128,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-04T08:00:00Z,80,10
+129,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-04T09:00:00Z,75,8
+130,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-04T10:00:00Z,90,11
+131,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-04T11:00:00Z,80,10
+132,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-04T12:00:00Z,75,8
+133,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-04T13:00:00Z,90,11
+134,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-04T14:00:00Z,80,10
+135,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-04T15:00:00Z,75,8
+136,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-04T16:00:00Z,90,11
+137,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-04T17:00:00Z,80,10
+138,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-04T18:00:00Z,75,8
+139,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-04T19:00:00Z,90,11
+140,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-05T08:00:00Z,80,10
+141,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-05T09:00:00Z,75,8
+142,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-05T10:00:00Z,90,11
+143,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-05T11:00:00Z,80,10
+144,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-05T12:00:00Z,75,8
+145,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-05T13:00:00Z,90,11
+146,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-05T14:00:00Z,80,10
+147,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-05T15:00:00Z,75,8
+148,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-05T16:00:00Z,90,11
+149,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-05T17:00:00Z,80,10
+150,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-05T18:00:00Z,75,8
+151,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-05T19:00:00Z,90,11
+152,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-06T08:00:00Z,80,10
+153,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-06T09:00:00Z,75,8
+154,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-06T10:00:00Z,90,11
+155,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-06T11:00:00Z,80,10
+156,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-06T12:00:00Z,75,8
+157,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-06T13:00:00Z,90,11
+158,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-06T14:00:00Z,80,10
+159,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-06T15:00:00Z,75,8
+160,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-06T16:00:00Z,90,11
+161,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-06T17:00:00Z,80,10
+162,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-06T18:00:00Z,75,8
+163,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-06T19:00:00Z,90,11
+164,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-07T08:00:00Z,80,10
+165,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-07T09:00:00Z,75,8
+166,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-07T10:00:00Z,90,11
+167,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-07T11:00:00Z,80,10
+168,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-07T12:00:00Z,75,8
+169,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-07T13:00:00Z,90,11
+170,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-07T14:00:00Z,80,10
+171,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-07T15:00:00Z,75,8
+172,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-07T16:00:00Z,90,11
+173,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-07T17:00:00Z,80,10
+174,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-07T18:00:00Z,75,8
+175,on_hold,home_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-07T19:00:00Z,90,11
+176,open,auto_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-08T08:00:00Z,80,10
+177,open,home_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-08T09:00:00Z,75,8
+178,on_hold,auto_claim,register_claim,Steve,claim_resolution,1,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",300,60,360,2023-05-08T10:00:00Z,90,11
+179,open,home_claim,register_claim,John,claim_resolution,2,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",250,30,280,2023-05-08T11:00:00Z,80,10
+180,open,auto_claim,register_claim,Mary,claim_resolution,3,"['outlook', 'excel', 'notepad', 'oracle', 'outlook']",200,20,220,2023-05-08T12:00:00Z,75,8

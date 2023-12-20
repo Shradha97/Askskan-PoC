@@ -1,0 +1,10 @@
+Column Name,Type,Description,Examples
+id,string,Unique id,
+participant_id,string,id of the participant,69f8f6f2d2788c7463ae45f33b372387
+participant_name,string,Name of the participant involved in the event. Not same as persona.,Jack
+persona_id,string,id given to a persona. It is a categorical variable. Not same as participant.",8fef2e788rdc7463e45f
+persona_name,string,Name given to a persona. It is a categorical variable. Not same as participant.,CES
+date,DateTime,Date indicating when the data was captured.,4/1/23
+worktime_expected,bigint,Amount of the time the participant is expected to work on date referred in 'date' column,8.0
+worktime_non_whitelisted,double,Total hours worked  by participant on whitelisted applications on date referred in 'date' column,2.0
+worktime_whitelisted,double,Total hours worked  by participant on non-whitelisted applications on date referred in 'date' column,4.0

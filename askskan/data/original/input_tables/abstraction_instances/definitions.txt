@@ -1,0 +1,20 @@
+Event:A specific occurrence of an action performed by the user at a given time.
+Activity:Describes a distinct user event, includes both process and non-process events. Only process events can be named. eg. of process events - enter first name, enter address details etc.
+Abstraction Hierarchy:An application-specific organization of activities logically grouped together into a hierarchical tree structure.
+Abstraction Type : There are two types of abstraction instances. one is Task instances,other is activity instances 
+Activity Abstraction: Also referred to as task. It is a node in the Abstraction Hierarchy Tree, a chosen logical group of activities within the Abstraction Hierarchy.
+Activity Instance:A participant-specific occurance of consecutive sequence of events at a given time belonging to the same activity abstraction. 
+Activity Discovered Name:Used only when explicitly asked about the discovered name of the activity.
+Non actionable event:Keyboard or mouse events which does not create user events that can be named are called non-actionable event. eg. alphabets, numbers, mouse scroll, mouse click etc. Also referred as non-process event.
+Case Identifier:A case will have one more case identifiers which are configured by process owner. Each case identifier has a name and a corresponding value that uniquely identifies the case.
+Participant:Also called user or resource, referred by participant_name in the schema. A human that actively engages with the system by performing actions or contributing to the event's occurrence. 
+Persona:Referred by persona_name in the schema. It is different from participant.
+Turn Around Time (turnaround_time): Also known as total time or just time spent, referred by turnaround_time in the schema. Turn around time (TAT) = processing time + wait time. 
+Processing time: It is different from process applications and non process applications. Used only when asked about processing time explicitly referred as processing_time in the schema.
+Case touch: count(unique case_id_value).
+Case effort: sum(turnaround_time)/count(unique case_id_value) 
+case_id_value: It is used when referring to total cases.
+case_id_name: It is used when need case names.
+activity_id: It is used when asking about activity.
+Case: every event is mapped to a case which is uniquely identifed by case_id_value
+Utilization: Utilization is the time spent working(active_time) on either process or non process applications, use active_time column from the schema.

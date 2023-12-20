@@ -1,0 +1,2 @@
+- In Questions related to participant's work or worktime always use  SUM(worktime) Function over all the days in the given date range, not  MAX(time)/ MIN(time)
+- for a participant total worktime or worktime  or work is the summition of worktime in the given date range

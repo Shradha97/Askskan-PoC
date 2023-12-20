@@ -1,0 +1,6 @@
+Column Name,Description,Example
+event_id,Unique Identification for a particular event.,0186dcc060cb68888b8a088ec9c9332e
+attribute_name,Label of the attribute extracted,Notification Type
+attribute_value,Value of the attribute extracted,ABS
+is_anonymize,Is the Value anonymised,FALSE
+is_case_id,Is the extracted attributed used as a case id,FALSE

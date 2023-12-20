@@ -1,0 +1,18 @@
+Column Name,Type,Description,Examples
+abstraction_instance_id,string,Activity instance id or task instance id,debebi39844bfuecb
+abstraction_id,string,Id of the Activity group in the Abstraction Hierarchy.,djcndjcne4934i9cr
+abstraction_alias_name,string,This term refers to the alias_name configured for activity_abstraction_level_id. Also referred to as activity_abstraction_level_alias_name and current_abstraction_level_alias_name.,absence case
+abstraction_type,string,Type of Abstraction. Task or Activity. ,Task
+persona_id,string,"id given to a persona, also referred to as persona. Not same as participant.",ehvbjherfvbr83ur48dchefvjh
+persona_name,string,Name given to a persona. It is a categorical variable. Not same as participant.,CES
+participant_id,string,"Id of the participant involved in the event, also refered to as participant or user. Not same as persona.",ejwhbfh382934ebf
+participant_name,string,Name of the participant involved in the event. Not same as persona.,Jack
+application_id,string,Id of the application on the device.,kitjgi98z
+application_name,string,Also known as the app name or application. Alias name of the application on the device.,notepad
+start_time,timestamp,Used only when 'abstraction type' column value is Activity.The timestamp of the starting event within the group of events belonging to an activity instance.,14:55:13.
+end_time,timestamp,Used only when 'abstraction type' column value is Activity.Activity_instance_original_end_time modified by user,15:55:13.
+case_id_name,string,Name of the field for the case_id_value,Notification Number
+case_id_value,string,A unique case identifier,NTN - 397
+processing_time,bigint,It is the (Total idle time below thresh hold-window + active_time (default thresh hold is 3 minutes)).,0.5
+turnaround_time,bigint,Also known as tat time and total time. Represents the duration or time difference between consecutive events. Turn Around Time (TaT) = next event time - current event time.,0.9
+wait_time,bigint,Also be called as inactive_time.It is the Total duration of idle time above the threshold-window (default threshold window is 3 minutes),0.1

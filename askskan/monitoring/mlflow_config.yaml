@@ -1,0 +1,24 @@
+routes:
+  - name: chat_35-turbo
+    route_type: llm/v1/chat
+    model:
+      provider: openai
+      name: gpt-35-turbo
+      config:
+        openai_api_type: "azure"
+        openai_api_key: 09ec6bb5136a4afab27de6a44fa4f998 # $AZURE_OPENAI_KEY
+        openai_deployment_name: architecture4I93pDgC2s # $AZURE_OPENAI_EMBED_NAME
+        openai_api_base: https://skandevazopenai.openai.azure.com/ # $AZURE_OPENAI_ENDPOINT
+        openai_api_version: "2023-05-15"
+
+  - name: embeddings
+    route_type: llm/v1/embeddings
+    model:
+      provider: openai
+      name: text-embedding-ada-002
+      config:
+        openai_api_type: "azure"
+        openai_api_key: 09ec6bb5136a4afab27de6a44fa4f998 # $AZURE_OPENAI_KEY
+        openai_deployment_name: architecture4I93pDgC2s-textemb # $AZURE_OPENAI_EMBED_NAME
+        openai_api_base: https://skandevazopenai.openai.azure.com/ # $AZURE_OPENAI_ENDPOINT
+        openai_api_version: "2022-12-01"

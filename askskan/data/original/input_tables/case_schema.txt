@@ -1,0 +1,14 @@
+Column Name,Description,Example
+cases_id,Identifier (C1,C2,..C3),C10
+case_id_name,CONCAT(case_id_name, '-', case_id_value),Noticifcation Number - NTN - 397
+processing_time,Total idle time below thresh hold window + active time (default thresh hold is 3 minutes),260
+tat_time,Turn Around Time =  next_event_time - current_event_time,4500
+wait_time,Total idle_time above thresh hold window (default thresh hold is 3 minutes),4240
+participants_distinct_count,total count of participants in the case,2
+applications_distinct_count,total count of applications used in the case,3
+event_count	total count of events in the case,5
+hw_event_profile,Sum of all types of keyboard events,100
+app_switch_count,total count of switch between applications in the case,3
+participant_switch_count,total count of switch between participants in the case,2
+start,Case start time,2023-04-03 14:55:13.907000
+end,Case End time,2023-04-03 14:55:13.907000

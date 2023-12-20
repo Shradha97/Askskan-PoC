@@ -1,0 +1,165 @@
+Question Context: Whenever the user question does not specify about the number of results needed, then return maximum 10 rows.
+1.  Question: What are the events that happened?
+    Output: {{
+        "Query": "SELECT event_id FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' AND event_date <= '2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' \
+            DESC LIMIT 10",
+        "Column": ["event_id"], 
+        "Skan Bot": "The events are #event_id#."
+    }}
+
+2. Question: What are applications used?
+    Output: {{
+        "Query": "SELECT app_name, COUNT(*) AS count FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' \
+            AND event_date <= '2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY app_name ORDER BY count DESC LIMIT 10",
+        "Column": ["app_name"], 
+        "Skan Bot": "The applications used are #app_name#."
+    }}
+
+Question Context: Whenever most used or top is asked, it means the use LIMIT 1 for giving 1 row in the result.
+1.  Question: What is the most used application?
+    Output: {{
+        "Query": "SELECT app_name, COUNT(*) AS count FROM unum_askskan.events_delta_t WHERE event_date >= '2023-04-01' AND event_date <= '2023-04-30'" \
+            AND persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY app_name ORDER BY count DESC LIMIT 1",
+        "Column": ["app_name"], 
+        "Skan Bot": "The most used application is #app_name#."
+    }}
+
+Question Context: Whenever total time spent or average time spent is asked in  questions regarding applications, then use the active_time column in the schema. 
+1.  Question: What is the total time spent on non process applications?
+    Output: {{
+        "Query": "SELECT SUM(active_time) AS total_time FROM unum_askskan.events_delta_tb WHERE agent_type == 0 AND \
+            persona_id = '61b1c6e57c3cf85434be0bc4' AND event_date >= '2023-04-01' AND event_date <= '2023-04-30' LIMIT 1",
+        "Column": ["total_time"],
+        "Skan Bot": "The total time spent on non process applications is #total_time#."
+    }}
+
+2.  Question: What is the average time spent on process applications for this persona?
+    Output: {{
+        "Query": "SELECT AVG(active_time) AS avg_time FROM unum_askskan.events_delta_tb WHERE agent_type != 0 AND \
+            persona_id = '61b1c6e57c3cf85434be0bc4' AND event_date >= '2023-04-01' AND event_date <= '2023-04-30' LIMIT 1",
+        "Column": ["avg_time"],
+        "Skan Bot": "The average time spent on process applications for this Do Not Use persona is #avg_time#."
+    }}
+
+Question Context: Whenever total average time per day is asked in  questions regarding applications, then first sum the active_time and divide by COUNT(DISTINCT event_date).
+1.  Question: What is the average time spent in non process applications per day?
+    Output: {{
+        "Query": "SELECT SUM(active_time)/COUNT(DISTINCT event_date) AS avg_time_per_day FROM unum_askskan.events_delta_tb WHERE agent_type==0 AND \
+            persona_id = '61b1c6e57c3cf85434be0bc4' AND event_date >= '2023-04-01' AND event_date <= '2023-04-30' LIMIT 1",
+        "Column": ["avg_time_per_day"],
+        "Skan Bot": "The average time spent on non process applications in non process applications per day is #avg_time_per_day#.
+    }}
+
+2.  Question: What is the average time spent in process applications per day?
+    Output: {{
+        "Query": "SELECT SUM(active_time)/COUNT(DISTINCT event_date) AS avg_time_per_day FROM unum_askskan.events_delta_tb WHERE agent_type!=0 AND \
+            persona_id = '61b1c6e57c3cf85434be0bc4' AND event_date >= '2023-04-01' AND event_date <= '2023-04-30' LIMIT 1",
+        "Column": ["avg_time_per_day"],
+        "Skan Bot": "The average time spent on non process applications in process applications per day is #avg_time_per_day#.
+    }}
+
+Question Context: Whenever asked about number of events then use the event_id column in the schema. Whenever asked about \
+per day then sum(column)/COUNT(DISTINCT event_date).
+1.  Question: what is the average number of events in a day?
+    Output: {{
+        "Query": "SELECT COUNT(event_id)/COUNT(DISTINCT event_date) AS avg_events_per_day FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' \
+            AND event_date <= '2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' LIMIT 1",
+        "Column": ["avg_events_per_day"],
+        "Skan Bot": "The average number of events in a day is #avg_events_per_day#.
+    }}
+
+    
+Question Context: Whenever asked about average of a column per case then sum(column)/count(unique case_id_value). DO NOT \
+    DO AVG(column) as it will give wrong results.
+1.  Question: which participant  has the least  average processing time per case?
+    Output: {{
+        "Query": "SELECT participant_name as participant,SUM(processing_time)/count(DISTINCT case_id_value)  AS avg_processing_per_case FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' \
+            AND event_date <= '2023-04-30' GROUP BY participant ORDER BY avg_processing_per_case LIMIT ASC 1",
+        "Column": ["avg_processing_per_case"],
+        "Skan Bot": "The average processing time per case is #avg_processing_per_case#.
+    }}
+
+Question Context: Whenever asked about average of a column is then do sum(column)/COUNT(DISTINCT event_date). DO NOT \
+    DO AVG(column) as it will give wrong results.
+1.  Question: What is the average case switch?
+    Output: {{
+        "Query": "SELECT SUM(CAST(case_switch AS INT))/count(DISTINCT event_date) AS avg_case_switch FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' \
+            AND event_date <= '2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' LIMIT 1",
+        "Column": ["avg_case_switch"],
+        "Skan Bot": "the average case switch is #avg_processing_per_case#.
+    }}
+
+
+Question Context: Whenever asked about last event or first event for the day use \
+    SELECT time as tm,COUNT(date) as cnt FROM(SELECT event_date as date,MIN(SUBSTRING(event_time,12,8)) as time. DO NOT USE \
+activity_instance_original_end_time or activity_instance_original_start_time as it will give wrong results.
+1.  Question: When is first event for the day?
+    Output: {{
+        "Query": "SELECT time as first_event_time,COUNT(date) as count FROM(SELECT event_date as date,MIN(SUBSTRING(event_time,12,8)) as time FROM unum_askskan.events_delta_tb \
+            WHERE event_date >= '2023-04-01' AND event_date <='2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY date ORDER BY time) GROUP BY first_event_time ORDER BY count DESC LIMIT 1",
+        "Column": ["first_event_time"],
+        "Skan Bot": "The first event occurs at #first_event_time#.
+    }}
+
+2.  Question: When is last event for the day? 
+    Output: {{
+        "Query": "SELECT time as last_event_time,COUNT(date) as count FROM(SELECT event_date as date,MAX(SUBSTRING(event_time,12,8)) as time FROM unum_askskan.events_delta_tb \
+            WHERE event_date >= '2023-04-01' AND event_date <='2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY date ORDER BY time) GROUP BY last_event_time ORDER BY count DESC LIMIT 1",
+        "Column": ["last_event_time"],
+        "Skan Bot": "The last event occurs at #last_event_time#.
+    }}
+
+Question Context: Whenever asked about  average Count of users on leave  then use the event_date column in the schema.
+1.  Question:what is the average count of users on leave for this LES persona?
+    Output: {{
+        "Query": "SELECT SUM(30-active_days)/30 AS avg_user_on_leave FROM (SELECT participant_name as participant,COUNT(DISTINCT event_date) AS active_days \
+            FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' AND event_date <= '2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY participant ORDER BY active_days) LIMIT 1",
+        "Column": ["event_date"],
+        "Skan Bot": "Average User on leave is  #event_date#.
+    }}
+
+Question Context: Whenever asked about users on leave then use event_date column.
+1.  Question:Which participant was on leave most days in this month ?
+    Output: {{
+        "Query": "SELECT participant_name, COUNT(DISTINCT event_date) AS leave_days FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' \
+            AND event_date <= '2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY participant_name ORDER BY leave_days ASC LIMIT 1",
+        "Column": ["event_date"],
+        "Skan Bot": "Average User on leave is  #event_date#.
+    }}
+
+
+Question Context: persona_name = 'Do Not Use' should NOT BE USED unless explicitly mentioned in the question.
+1.  Question: which is the most used application by the user which is not used for business operation?
+    Output: {{
+        "Query": "SELECT app_name, COUNT(*) AS count FROM unum_askskan.events_delta_tb WHERE agent_type = 0 AND \
+            app_name IS NOT NULL AND event_date >= '2023-04-01' AND event_date <= '2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' \
+            GROUP BY app_name ORDER BY count DESC LIMIT 1",
+        "Column": ["app_name"],
+        "Skan Bot": "The most used  application by the user which is not used for business operation is #app_name#.
+    }}
+
+Question Context: Whenever asked about activity then definitely use activity_id column in the schema.
+1.  Question: Which is the most common activity?
+    Output: {{
+        "Query": "SELECT activity_id, COUNT(*) AS count FROM unum_askskan.events_delta_tb WHERE event_date >= '2023-04-01' AND \
+            event_date <= '2023-04-30' AND persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY activity_id ORDER BY count DESC LIMIT 1",
+        "Column": ["activity_id"],
+        "Skan Bot": "The most common activity is #activity_id#.
+    }}
+
+Question Context: Whenever asked clipboard then always use SUM(clipboard).
+1.  Question: which participant has the highest no of clipboard count?
+    Output: {{
+        "Query": "SELECT participant_name, SUM(clipboard) as count from unum.data Where event_date>='2023-04-01' and event_date<='2023-04-30' \
+            AND persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY participant_name ORDER BY count DESC LIMIT 1",
+        "Column": ["participant_name"],
+        "Skan Bot": "The participant with the highest clipboard count is #participant_name#.
+    }}
+2.Question: what is the clipboard count for participant GUP22?
+    Output: {{
+        "Query": "SELECT SUM(clipboard) as count from unum.data Where event_date>='2023-04-01' and event_date<='2023-04-30' \
+            AND persona_id = '61b1c6e57c3cf85434be0bc4' AND participant_name = GUP22 ",
+        "Column": ["count"],
+        "Skan Bot": " participant  clipboard count is #count#.
+    }}
+

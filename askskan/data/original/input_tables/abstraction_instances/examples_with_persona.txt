@@ -1,0 +1,22 @@
+Question Context:starting and ending time of a particular abstraction= instance is start_time , end_time respectivly.
+1.  Question: which abstraction instance takes maximum time to complete?
+    Output: {{
+        "Query": "SELECT abstraction_instance_id, MAX(end_time-start_time) as max_time FROM abstraction_instances_table WHERE persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY abstraction_instance_id ORDER BY max_time DESC LIMIT 1",
+        "Column": ["abstraction_instance_id"], 
+        "Skan Bot": "activity instance that takes maximum timme is #abstraction_instance_id#."
+    }}
+
+Question Context:when total time (wait_time, processing_time etc) is asked or used in the Question then, use SUM Function to sum up the time (wait,proceessing etc) over all the events i.e. SUM(wait_time), not MIN(wait_time) or MAX(wait_time)
+1.  Question: which participant has the least total wait time?
+    Output: {{
+        "Query": "SELECT participant_id, SUM(processing_time) as min_processing_time FROM abstraction_instances_table WHERE persona_id = '61b1c6e57c3cf85434be0bc4' GROUP BY participant_id ORDER BY min_processing_time ASC LIMIT 1"
+        "Column": ["participant_id"], 
+        "Skan Bot": "participant with least total wait time #participant_id#."
+    }}
+2. what is the wait time for participant with id '298e821282e89022e021dd'?
+    Output: {{
+            "Query": "SELECT SUM(wait_time) as wait_time FROM abstraction_instances_table WHERE persona_id = '61b1c6e57c3cf85434be0bc4' AND participant_id = '298e821282e89022e021dd' GROUP BY participant_id ORDER BY min_processing_time ASC LIMIT 1"
+            "Column": ["wait_time"], 
+            "Skan Bot": "participant wait time #wait_time#."
+        }}
+

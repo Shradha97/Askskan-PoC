@@ -1,0 +1,9 @@
+case_id,case_status,case_type,task_name,participant_id,process_name,process_variant,applications_used,processing_time,wait_time,turnaround_time,start_time,no_of_keystokes,no_of_shortcut_keys
+C1001,open,auto_claim,file_claim,John,claims_handling,1,"['claims_system', 'email']",300,50,350,2023-05-16T09:00:00Z,100,10
+C1001,in_progress,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",600,100,700,2023-05-16T09:10:00Z,200,15
+C1001,on_hold,auto_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",600,1200,1800,2023-05-16T09:20:00Z,250,20
+C1001,closed,auto_claim,approve_claim,Steve,claims_approval,1,['claims_system'],180,60,240,2023-05-16T10:00:00Z,80,5
+C1002,open,home_claim,file_claim,Susan,claims_handling,1,"['claims_system', 'email']",420,70,490,2023-05-16T09:00:00Z,130,12
+C1002,in_progress,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",700,150,850,2023-05-16T09:15:00Z,220,18
+C1002,on_hold,home_claim,review_claim,Mary,claims_review,2,"['claims_system', 'email', 'database']",700,1500,2200,2023-05-16T09:30:00Z,280,25
+C1002,closed,home_claim,approve_claim,Steve,claims_approval,1,['claims_system'],200,70,270,2023-05-16T10:10:00Z,85,6

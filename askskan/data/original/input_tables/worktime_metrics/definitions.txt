@@ -1,0 +1,5 @@
+Participant:Also called user, referred by participant_id in the schema. A human that actively engages with the system.
+Persona:Referred by persona_id in the schema. It is different from participant.
+Date: Referred to column name 'date' in the schema. Used when asked anything about the date related.
+whitelisted Application: Applications on which participant work and its data is recorded.
+Non whitelisted Application: Applications on which participant work and its data is not recorded.

@@ -1,0 +1,6 @@
+Participant:Also called user, referred by participant_id in the schema. A human that actively engages with the system.
+Persona:Referred by persona_id in the schema. It is different from participant.
+Event:A specific occurrence of an action performed by the user at a given time.
+Virtual Assistant:A bot sitting on the user's system that captures the events that observes the participant actions and captures them.
+Event date: Referred by event_date in the schema. Used when asked anything about the date related to the event.
+Business applications/operations: These are events that include only process applications. agent_type != 0 when Business applications/operation is used. agent_type = 0 when Business applications/operation is not used.

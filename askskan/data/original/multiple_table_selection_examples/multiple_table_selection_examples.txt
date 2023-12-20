@@ -1,0 +1,11 @@
+1. Question: "Which persona has the greatest worktime that is not whitelisted?"
+    Output: {
+            "unum_askskan.events_delta_tb": {
+
+            "describe_table_abstraction_instances":"persona_id", 
+            "describe_worktime_metrics":"participant_id"
+            }
+        }
+    Reasoning: As the question needs information about persona, it will be obtained from the events table as the major table that forms a key of the \
+            dictionary. Since the instruction says to select the all of the additional minor tables corresponding to the major table, \
+            hence, create an inner list for each additional minor table of the selected major table. \

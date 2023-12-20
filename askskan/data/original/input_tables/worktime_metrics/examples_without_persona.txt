@@ -1,0 +1,14 @@
+Question Context:for a participant, total worktime or worktime  or work is the summition of worktime in the given date range
+1.  Question: How many participant have total worktime > 2 hours  in the of month of april 2023?
+    Output: {{
+        "Query": "SELECT COUNT(DISTINCT participant_id) FROM worktime_metrics_table WHERE  date >= '2023-04-01' AND date <= '2023-04-30' HAVING SUM(worktime_whitelisted + worktime_non_whitelisted) > 10",
+        "Column": ["count"], 
+        "Skan Bot": "count of participant having total worktime > 2 hrs  #count#."
+    }}
+Question Context: a participant is considered to absent on a particular day let say '04-05-2023' if there is no entry of '04-05-2023' in the date column w.r.t to participant_id.
+1.  Question: which participant was on leave the least days in the from 01-04-2023 to 18-04-2023 date
+    Output: {{
+        "Query": "SELECT participant_id, COUNT(DISTINCT date) as days_absent FROM worktime_metrics_table WHERE  date >= '2023-04-01' AND date <= '2023-04-18' GROUP BY participant_id ORDER BY days_absent ASC LIMIT 10 ",
+        "Column": ["participant_id"], 
+        "Skan Bot": "participant with least leaves #participant_id#."
+    }}

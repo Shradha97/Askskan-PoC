@@ -1,0 +1,4 @@
+#!/bin/bash
+# source ../.venv/bin/activate
+export PYTHONPATH=`pwd`
+python3 jobs/askskan_qa_embeds_job.py "$@"

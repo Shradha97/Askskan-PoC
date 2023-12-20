@@ -1,0 +1,16 @@
+Column Name,Type,Description,Examples
+event_id,text,Unique Identifier for a particular event.,0186dcc060cb68888b8a088ec9c9332e
+event_time,datetime,Timestamp indicating when the event was captured.,2023-04-03 14:55:13.186000
+sequence_id,int,Sequence number of the event. The sequence is assigned by the virtual assistant. The virtual assistant increments the number for every event created by it on that device.,73016
+persona_id,string,Unique id given to a particular persona. It is a categorical variable. Not same as participant. Use only when persona id is asked or used in the question.,8fef2e788rdc7463e45f
+participant_id,string,Id of the participant involved in the event. Also refered to as participant or user. Not same as persona.,ejwhbfh382934ebf
+application_id,string,Id of the application on the device.,kitjgi98z
+agent_type,int,"This represents the values of different types of process and non-process. (All applications with values not equal to zero are process applications):Non-process applications: 0 ,Desktop or native applications: 2 ,Browser-based applications: 3, 4, 5, 6, 7, or 8 ,Java-based applications: 9 ,Mainframe applications: 10 or 11 ,Web extension-based applications: 100 and larger",101
+clipboard,int,Total number of updates made to the clipboard since the previous event up to the current event.,3
+title,string,Title of the current window while capturing the event.,Enter User Details
+event_date,datetime,Date indicating when the event was captured.,4/1/23
+navigation_key_count,int,Total count of navigation keys pressed from previous event up to the current event.,0
+number_key_count,int,Total count of numeric keys pressed from previous event up to the current event.,0
+mouse_count,int,Total count of mouse clicks from previous event up to the current event.,0
+mouse_wheel,int,Total count of mouse wheel movements from previous event upto the current event.,0
+alpha_key_count,int,Total count of alphabets pressed from previous event to this event.,0

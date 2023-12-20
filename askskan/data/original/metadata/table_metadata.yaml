@@ -1,0 +1,84 @@
+tables:
+  - name: unum_askskan.events_delta_tb
+    description: "This table contains information related to events"
+    usage: "Use this table when asked about events for any persona"
+    columns:
+      - event_id
+      - sequence_id
+      - event_time
+      - persona_id
+      - clipboard
+      - title
+      - event_date
+      - navigation_key_count
+      - number_key_count
+      - mouse_count
+      - mouse_wheel
+      - alpha_key_count
+    table_join_info:
+      - join_set_1:
+          - source_column: "persona_id"
+          - target_column: "persona_id"
+          - target_table: "describe_table_abstraction_instances"
+
+  - name: describe_table_abstraction_instances
+    description: "This table contains information related to abstractions like task or activity, cases, and applications"
+    usage: "Use this table when asked about abstractions, cases, applications, times related to applications for any persona or participant"
+    columns:
+      - abstraction_instance_id
+      - abstraction_id
+      - abstraction_alias_name
+      - abstraction_type
+      - persona_id
+      - persona_name
+      - participant_id
+      - participant_name
+      - application_id
+      - application_name
+      - start_time
+      - end_time
+      - case_id_name
+      - case_id_value
+      - processing_time
+      - turnaround_time
+      - wait_time
+    table_join_info:
+      - join_set_1:
+          - source_column: "persona_id"
+          - target_column: "persona_id"
+          - target_table: "unum_askskan.events_delta_tb"
+      - join_set_2:
+          - source_column: "persona_id"
+          - target_column: "persona_id"
+          - target_table: "describe_worktime_metrics"
+      - join_set_3:
+          - source_column: "participant_id"
+          - target_column: "participant_id"
+          - target_table: "describe_worktime_metrics"
+
+  - name: describe_worktime_metrics
+    description: "This table contains information about metrics related to worktime"
+    usage: "Use this table when asked about worktime metrics for any persona or participant"
+    columns:
+      - id
+      - participant_id
+      - participant_name
+      - persona_id
+      - persona_name
+      - date
+      - worktime_expected
+      - worktime_non_whitelisted
+      - worktime_whitelisted
+    table_join_info:
+      - join_set_1:
+          - source_column: "persona_id"
+          - target_column: "persona_id"
+          - target_table: "unum_askskan.events_delta_tb"
+      - join_set_2:
+          - source_column: "persona_id"
+          - target_column: "persona_id"
+          - target_table: "describe_table_abstraction_instances"
+      - join_set_3:
+          - source_column: "participant_id"
+          - target_column: "participant_id"
+          - target_table: "describe_table_abstraction_instances"

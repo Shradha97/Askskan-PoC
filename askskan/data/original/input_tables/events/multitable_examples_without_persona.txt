@@ -1,0 +1,29 @@
+1. Question: Which participant has the greatest worktime whitelisted?
+    Output: {{
+        "Query": "SELECT participant_name, SUM(worktime_whitelisted) AS total_whitelisted_worktime \
+                    FROM unum_askskan.events_delta_tb AS events_delta_tb \
+                    JOIN describe_worktime_metrics ON events_delta_tb.participant_id = describe_worktime_metrics.participant_id \
+                    WHERE event_date >= '2023-04-01' AND event_date <= '2023-04-30' \
+                    GROUP BY participant_name \
+                    ORDER BY total_whitelisted_worktime DESC \
+                    LIMIT 1",
+        "Column": "participant_name", 
+        "Skan Bot": "The participant with the highest whitelisted worktime is #result#."
+    }}
+
+2. Question:what is the total no of unique cases for paricipant with id 'e8932e8ehf2289eh2'
+     Output: {{
+        "Query": "SELECT COUNT(DISTINCT case_id_value) AS total_unique_cases FROM unum_askskan.events_delta_tb AS events_delta_tb JOIN describe_table_abstraction_instances ON events_delta_tb.persona_id = describe_table_abstraction_instances.persona_id WHERE start_time >= '2023-04-01' AND end_time <= '2023-04-30'  AND events_delta_tb.participant_id = 'e8932e8ehf2289eh2' LIMIT 10 "
+
+        "Column": "total_unique_cases", 
+        "Skan Bot": "total unique cases  #total_unique_cases#."
+    }}
+
+3. Question:which participant was on leave most of the days
+     Output: {{
+        "Query": "SELECT participant_name, COUNT(DISTINCT date) as leave_days FROM unum_askskan.events_delta_tb AS events_delta_tb  JOIN describe_worktime_metrics ON events_delta_tb.participant_id = describe_worktime_metrics.participant_id   WHERE date >= '2023-04-01' AND date <= '2023-04-30'  GROUP BY participant_name  ORDER BY leave_days ASC  LIMIT 1 "
+
+
+        "Column": "participant_name", 
+        "Skan Bot": "most leaves #participant_name#."
+    }}

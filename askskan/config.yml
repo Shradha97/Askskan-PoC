@@ -1,0 +1,13 @@
+# inputs
+
+# file_paths
+config_file: "jobs/config.yml"
+log_file: "logs/logs.log"
+
+#folder name where table's schema, definitons etc are present
+active_schema_folder_name: "events"
+#table name in delta lake
+table_name_in_dl: "unum_askskan.events_delta_tb"
+
+# folder with examples for multiple table selection
+multiple_table_selection_examples_folder_name: "multiple_table_selection_examples"
